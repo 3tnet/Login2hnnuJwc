@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Ty666\\Login2hnnuJwc": "src/"
+      "Ty666\\Login2hnnuJwc\\": "src/"
     }
   }
 }
