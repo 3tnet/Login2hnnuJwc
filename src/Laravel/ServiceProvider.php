@@ -1,6 +1,6 @@
 <?php
 
-namespace Ty666\Login2hnnuJwc;
+namespace Ty666\Login2hnnuJwc\ServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -9,7 +9,7 @@ use Illuminate\Support\ServiceProvider;
  * Date: 16-10-10
  * Time: 下午9:15
  */
-class Login2hnnuJwcServiceProvider extends ServiceProvider
+class ServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

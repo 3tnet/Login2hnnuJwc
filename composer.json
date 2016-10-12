@@ -1,6 +1,6 @@
 {
   "name": "ty666/login2hnnu-jwc",
-  "description": "淮南师范学院教务处认证laravel扩展",
+  "description": "基于curl淮南师范学院教务处认证",
   "authors": [
     {
       "name": "ty",
@@ -9,6 +9,7 @@
   ],
   "license": "MIT",
   "require": {
+    "php-curl-class/php-curl-class": "^7.0.0"
   },
   "autoload": {
     "psr-4": {
