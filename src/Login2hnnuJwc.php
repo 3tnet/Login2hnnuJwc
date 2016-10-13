@@ -26,7 +26,7 @@ class Login2hnnuJwc
      * @param $studentNum 学号
      * @param $idCard 身份证号码
      * @return bool
-     * @throws LoginJWCException
+     * @throws LoginJWCException 登录失败会抛出LoginJWCException异常
      */
     public function login2Jwc( $studentNum, $idCard){
         $this->curl->post($this->loginUri,[
@@ -39,7 +39,8 @@ class Login2hnnuJwc
             //echo 'Error: ' . $curl->errorCode . ': ' . $curl->errorMessage;
         }
         $content = mb_convert_encoding($this->curl->response, 'UTF-8', 'gb2312');
-        foreach ($this->curl->getResponseCookies() as $key => $val){
+		
+        foreach ($this->curl->responseCookies as $key => $val){
             if(starts_with($key, 'ASPSESSIONID')){
                 $this->curl->setCookie($key, $this->curl->getCookie($key));
                 break;
@@ -66,7 +67,7 @@ class Login2hnnuJwc
      * @param Curl $curl
      * @return array
      */
-    private function getStudentInfoFromJWC(){
+    public function getStudentInfoFromJWC(){
 
         $this->curl->get($this->studentInfoUri);
         if ($this->curl->error) {
