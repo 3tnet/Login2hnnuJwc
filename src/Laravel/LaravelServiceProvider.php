@@ -2,7 +2,7 @@
 
 namespace Ty666\Login2hnnuJwc\Laravel;
 use Illuminate\Support\ServiceProvider;
-
+use Ty666\Login2hnnuJwc\Login2hnnuJwc;
 /**
  * Created by PhpStorm.
  * User: ty
@@ -28,10 +28,11 @@ class LaravelServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
         $this->app->singleton('login2hnnuJwc', function ($app) {
 
-            $pictureManager = new Login2hnnuJwc();
-            return $pictureManager;
+            $login2hnnuJwc = new Login2hnnuJwc( app('Curl\Curl') );
+            return $login2hnnuJwc;
         });
     }
 }
