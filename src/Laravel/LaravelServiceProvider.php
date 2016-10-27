@@ -30,7 +30,6 @@ class LaravelServiceProvider extends ServiceProvider
     {
 
         $this->app->singleton('login2hnnuJwc', function ($app) {
-
             $login2hnnuJwc = new Login2hnnuJwc( app('Curl\Curl') );
             return $login2hnnuJwc;
         });
