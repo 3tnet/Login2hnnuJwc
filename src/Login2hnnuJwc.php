@@ -14,7 +14,7 @@ use Ty666\Login2hnnuJwc\Exception\LoginJWCException;
  */
 class Login2hnnuJwc
 {
-    private $loginUri = 'http://211.70.176.123/wap/index.asp';
+    private $loginUri = 'http://211.70.176.126/wap/index.asp';
     private $studentInfoUri = 'http://211.70.176.123/wap/grxx.asp';
     private $photoUri = 'http://211.70.176.123/dbsdb/tp.asp?xh=';
     private $currentStudentNum = '';
@@ -22,8 +22,11 @@ class Login2hnnuJwc
     public function __construct(Curl $curl)
     {
         $this->curl = $curl;
+        $this->setConnectTimeout(7);
     }
-
+    public function setConnectTimeout($seconds){
+        $this->curl->setConnectTimeout($seconds);
+    }
     /**
      * Step.1 登陆进教务处
      * @param $studentNum 学号
@@ -42,6 +45,7 @@ class Login2hnnuJwc
             throw new LoginJWCException('教务处好像卡了...');
             //echo 'Error: ' . $curl->errorCode . ': ' . $curl->errorMessage;
         }
+
         $content = mb_convert_encoding($this->curl->response, 'UTF-8', 'gb2312');
 		
         foreach ($this->curl->responseCookies as $key => $val){
@@ -74,7 +78,8 @@ class Login2hnnuJwc
 
         $this->curl->get($this->studentInfoUri);
         if ($this->curl->error) {
-            throw new HttpException(500, $this->curl->errorMessage);
+            //throw new HttpException(500, $this->curl->errorMessage);
+            throw new LoginJWCException('教务处好像卡了...');
             //echo 'Error: ' . $curl->errorCode . ': ' . $curl->errorMessage;
         }
         $content = mb_convert_encoding($this->curl->response, 'UTF-8', 'gb2312');
