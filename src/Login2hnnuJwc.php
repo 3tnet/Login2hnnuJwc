@@ -14,7 +14,7 @@ use Ty666\Login2hnnuJwc\Exception\LoginJWCException;
  */
 class Login2hnnuJwc
 {
-    private $loginUri = 'http://211.70.176.126/wap/index.asp';
+    private $loginUri = 'http://211.70.176.123/wap/index.asp';
     private $studentInfoUri = 'http://211.70.176.123/wap/grxx.asp';
     private $photoUri = 'http://211.70.176.123/dbsdb/tp.asp?xh=';
     private $currentStudentNum = '';
