@@ -25,7 +25,7 @@
   * @return array
   */
 
- Login2hnnuJwc::getStudentInfoFromJWC($studentNum, $idCard);
+ Login2hnnuJwc::getStudentInfoFromJWC();
 ```
 #### 返回数组
 ```
