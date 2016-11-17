@@ -63,6 +63,7 @@ class Login2hnnuJwc
         }else{
 
             if(1 === preg_match('/<SCRIPT language=JavaScript> window\.alert\(\'欢迎登陆教务系统！\'\);location\.href=\'main\.asp\'<\/SCRIPT>/', $content, $m)){
+                $this->currentStudentNum = $studentNum;
                 //登陆成功
                 return $this;
             }
