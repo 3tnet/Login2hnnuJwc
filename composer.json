@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "require": {
-    "php-curl-class/php-curl-class": "^7.0.0"
+    "php-curl-class/php-curl-class": "7.0.1"
   },
   "autoload": {
     "psr-4": {
