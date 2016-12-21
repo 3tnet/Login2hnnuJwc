@@ -58,8 +58,9 @@ class Login2hnnuJwc
             if(1 === preg_match('/<SCRIPT language=JavaScript> window\.alert\(\'欢迎登陆教务系统！\'\);location\.href=\'main\.asp\'<\/SCRIPT>/', $content, $m)){
 		foreach ($this->curl->responseCookies as $key => $val){
             		if(starts_with($key, 'ASPSESSIONID')){
-                	$this->curl->setCookie($key, $this->curl->getCookie($key));
-                	break;
+                		$this->curl->setCookie($key, $this->curl->getCookie($key));
+                		break;
+			}
             	}
                 $this->currentStudentNum = $studentNum;
                 //登陆成功
