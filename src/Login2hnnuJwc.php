@@ -47,14 +47,7 @@ class Login2hnnuJwc
         }
 
         $content = mb_convert_encoding($this->curl->response, 'UTF-8', 'gb2312');
-		
-        foreach ($this->curl->responseCookies as $key => $val){
-            if(starts_with($key, 'ASPSESSIONID')){
-                $this->curl->setCookie($key, $this->curl->getCookie($key));
-                break;
-            }
-        }
-
+	
         $m = [];
 
         if(1 === preg_match('/<p align="center">[\s\S]+?<font color=blue>&nbsp; (.+)<\/font>[\s\S]+?<\/font>/i', $content, $m))
@@ -63,6 +56,11 @@ class Login2hnnuJwc
         }else{
 
             if(1 === preg_match('/<SCRIPT language=JavaScript> window\.alert\(\'欢迎登陆教务系统！\'\);location\.href=\'main\.asp\'<\/SCRIPT>/', $content, $m)){
+		foreach ($this->curl->responseCookies as $key => $val){
+            		if(starts_with($key, 'ASPSESSIONID')){
+                	$this->curl->setCookie($key, $this->curl->getCookie($key));
+                	break;
+            	}
                 $this->currentStudentNum = $studentNum;
                 //登陆成功
                 return $this;
