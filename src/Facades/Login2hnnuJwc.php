@@ -12,6 +12,6 @@ class Login2hnnuJwc extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'login2hnnuJwc';
+        return \Ty666\Login2hnnuJwc\Login2hnnuJwc::class;
     }
 }

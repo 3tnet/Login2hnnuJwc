@@ -1,8 +1,11 @@
 <?php
 
 namespace Ty666\Login2hnnuJwc\Laravel;
+
+use GuzzleHttp\RequestOptions;
 use Illuminate\Support\ServiceProvider;
 use Ty666\Login2hnnuJwc\Login2hnnuJwc;
+
 /**
  * Created by PhpStorm.
  * User: ty
@@ -29,9 +32,8 @@ class LaravelServiceProvider extends ServiceProvider
     public function register()
     {
 
-        $this->app->singleton('login2hnnuJwc', function ($app) {
-            $login2hnnuJwc = new Login2hnnuJwc( app('Curl\Curl') );
-            return $login2hnnuJwc;
+        $this->app->bind(Login2hnnuJwc::class, function ($app) {
+            return new Login2hnnuJwc(new \GuzzleHttp\Client([RequestOptions::TIMEOUT => 7]));
         });
     }
 }

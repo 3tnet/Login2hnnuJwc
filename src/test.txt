@@ -1,0 +1,80 @@
+
+
+
+<table width="320"    align=center  cellspacing="0" cellpadding="0" border="1" rules=none bordercolor="#C0C0C0">
+<tr>
+<td valign="top">
+<p style="margin-top: 5px; margin-bottom: 10px; margin-left:5px">
+
+
+
+<p style="margin-top: 10px; margin-bottom: 5px; " align="center"><IMG SRC="../dbsdb/tp.asp?xh=1607010523" width="120" height="160"> 　
+<p style="margin-top: 10px; margin-bottom: 5px; " align="center"><font color=red>凃莹莹</font><font size="2">同学的
+学籍基本信息:</font><table border="1" width="320" id="table1" cellspacing="0" cellpadding="0" bordercolor="#3399FF" height="134">
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">
+			<font size="2" color="#000080">学号</font></td>
+			<td align="center" width="150" height="22" valign="middle">
+			<font size="2" color="#000080">专业</font></td>
+					</tr>
+
+
+
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">1607010523</td>
+			<td align="center" width="150" height="22" valign="middle">化学</td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">
+			<font size="2" color="#000080">院系</font></td>
+			<td align="center" width="150" height="22" valign="middle">
+			<font size="2" color="#000080">班级</font></td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">化学与材料工程学院</td>
+			<td align="center" width="150" height="22" valign="middle">化学16(5)</td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">
+			<font size="2" color="#000080">民族</font></td>
+			<td align="center" width="150" height="22" valign="middle">
+			<font size="2" color="#000080">籍贯</font></td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">汉族</td>
+			<td align="center" width="150" height="22" valign="middle">安徽省六安市</td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">
+			<font size="2" color="#000080">出生日期</font></td>
+			<td align="center" width="150" height="22" valign="middle">
+			<font size="2" color="#000080">政治面貌</font></td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">1998-11-09</td>
+			<td align="center" width="150" height="22" valign="middle">共青团员</td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">
+			<font size="2" color="#000080">身份证号码</font></td>
+			<td align="center" width="150" height="22" valign="middle">
+			<font size="2" color="#000080">高考考生号</font></td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">342401199811091866</td>
+			<td align="center" width="150" height="22" valign="middle">16341503170244</td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle">
+			<font size="2" color="#000080">手机号码</font></td>
+			<td align="center" width="150" height="22" valign="middle">
+			<font size="2" color="#000080">教务系统登陆密码</font></td>
+					</tr>
+		<tr>
+			<td align="center" width="170" height="22" valign="middle"></td>
+			<td align="center" width="150" height="22" valign="middle">246810tt</td>
+					</tr>
+
+
+
+</table>
