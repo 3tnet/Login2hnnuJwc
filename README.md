@@ -1,9 +1,14 @@
 # Login2hnnuJwc
 登陆到淮南师范学院教务处laravel扩展
 
-## Installation
+
+## Installation 
 - Run `composer require ty666/login2hnnu-jwc`
-- Add `Ty666\Login2hnnuJwc\Laravel\LaravelServiceProvider::class,` to  **providers** in *config/app.php*
+
+# 该扩展包已经可以独立使用
+
+## In laravel
+- Add `Ty666\Login2hnnuJwc\Laravel\LaravelServiceProvider::class,` to  **providers** in *config/app.php*
 - Add `'Login2hnnuJwc' => Ty666\Login2hnnuJwc\Facades\Login2hnnuJwc::class,` to **aliases** in *config/app.php*
 
 ## Usage
