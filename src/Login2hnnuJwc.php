@@ -94,7 +94,7 @@ class Login2hnnuJwc
         $content = mb_convert_encoding($res->getBody(), 'UTF-8', 'gbk');
 
         $m = [];
-        if(1 === preg_match('/<IMG SRC="\.\.\/dbsdb\/tp\.asp\?xh=(\d{10})" width="120" height="160">[\s\S]+?"center"><font color=red>(.+)<\/font>[\s\S]+?班级[\s\S]+?<td align="center" width="170" height="22" valign="middle">(.+)<\/td>[\s\S]+?<td align="center" width="150" height="22" valign="middle">(.+)<\/td>[\s\S]+?政治面貌[\s\S]+?<td align="center" width="170" height="22" valign="middle">(.+)<\/td>/i', $content, $m))
+        if(1 === preg_match('/<IMG SRC="\.\.\/dbsdb\/tp\.asp\?xh=(\d{10})" width="120" height="160">[\s\S]+?"center"><font color=red>(.+)<\/font>[\s\S]+?班级[\s\S]+?<td align="center" width="170" height="22" valign="middle">(.*)<\/td>[\s\S]+?<td align="center" width="150" height="22" valign="middle">(.*)<\/td>[\s\S]+?政治面貌[\s\S]+?<td align="center" width="170" height="22" valign="middle">(.*)<\/td>/i', $content, $m))
         {
 
             $info = [
