@@ -44,7 +44,7 @@ class Login2hnnuJwc
             $res = $this->client->send($request, [
                 RequestOptions::QUERY => [
                     'xh' => $studentNum,
-                    'sfzh' => strtoupper($idCard)
+                    'sfzh' => $idCard
                 ]
             ]);
         }catch (RequestException $exception){
